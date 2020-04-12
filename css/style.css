@@ -1,0 +1,196 @@
+/*@font-face {
+	font-family: 'Lato';
+	src: url('./fonts/Lato-Regular.eot');
+	src: url('./fonts/Lato-Regular.eot') format('embedded-opentype'),
+	url('./fonts/Lato-Regular.woff2') format('woff2'),
+	url('./fonts/Lato-Regular.woff') format('woff'),
+	font-weight: 400;
+}*/
+@font-face {
+	font-family: 'Lato';
+	src: url('./fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+	src: url('./fonts/Lato-Regular.eot') format('embedded-opentype'), url('./fonts/Lato-Regular.woff2') format('woff2'), url('./fonts/Lato-Regular.woff') format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Trueno';
+	src: url('./fonts/TruenoLt.eot'); /* IE9 Compat Modes */
+	src: url('./fonts/TruenoLt.eot') format('embedded-opentype'), url('./fonts/TruenoLt.woff2') format('woff2'), url('./fonts/TruenoLt.woff') format('woff');
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Trueno';
+	src: url('./fonts/TruenoRg.eot'); /* IE9 Compat Modes */
+	src: url('./fonts/TruenoRg.eot') format('embedded-opentype'), url('./fonts/TruenoRg.woff2') format('woff2'), url('./fonts/TruenoRg.woff') format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Trueno';
+	src: url('./fonts/TruenoSBd.eot'); /* IE9 Compat Modes */
+	src: url('./fonts/TruenoSBd.eot') format('embedded-opentype'), url('./fonts/TruenoSBd.woff2') format('woff2'), url('./fonts/TruenoSBd.woff') format('woff');
+	font-weight: 600;
+}
+/*@font-face {
+	font-family: 'Trueno';
+	src: url('./fonts/TruenoRg.eot');
+	src: url('./fonts/TruenoRg.eot') format('embedded-opentype'),
+	url('./fonts/TruenoRg.woff2') format('woff2'),
+	url('./fonts/TruenoRg.woff') format('woff'),
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Trueno';
+	src: url('./fonts/TruenoSBd.eot');
+	src: url('./fonts/TruenoSBd.eot') format('embedded-opentype'),
+	url('./fonts/TruenoSBd.woff2') format('woff2'),
+	url('./fonts/TruenoSBd.woff') format('woff'),
+	font-weight: 600;
+}*/
+html,body {
+    margin: 0;
+    font-family: 'Trueno';
+}
+body {
+    margin: auto;
+    max-width: 1100px;
+}
+h1 {
+    font-family: Trueno;
+    font-size: 44px;
+    margin: 0;
+    font-weight: 600;
+}
+h2{
+	font-family: Trueno;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+h3{
+	font-family: Trueno;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+}
+p{
+	font-family: Trueno;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 300;
+}
+.menu-hans a{
+    text-decoration: none;
+    color: unset;
+    font-size: 14px;
+    font-family: Trueno;
+    font-weight: 400;
+    position: relative;
+}
+ul ,li{
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+a{
+	text-decoration: none;
+	color: unset;
+}
+header{
+	position: relative;
+}
+.banner-hans {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    width: 100%;
+}
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    height: 80px;
+}
+.menu-hans {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 283px;
+}
+.rrss-hans {
+    right: 0;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 30px;
+}
+a.item-menu:nth-of-type(2):after {
+    content: "";
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid black;
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: -8px;
+}
+.menu-hans {
+    margin: auto;
+}
+.item {
+    width: 50%;
+    display: grid;
+    float: right;
+}
+.item {
+    width: 50%;
+    display: grid;
+    float: right;
+    margin-top: 40px;
+    grid-auto-rows: 162px 30px 72px;
+    min-width: 544px;
+    max-width: 544px;
+}
+.item ul li {
+    padding-left: 76px;
+    position: relative;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #0000001A;
+    min-height: 72px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+figure.icon-play {
+    width: 40px;
+    height: 40px;
+    background: #0D73E2;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0;
+    left: 24px;
+    display: flex;
+}
+.icon-play img {
+    margin: auto;
+    margin-top: 11px;
+}
+
+@media (max-width: 360px) {
+    main {
+        grid-template-columns: 100%;
+        width: 100%;
+        justify-items: center;
+    }
+    .rrss-hans {
+    display: none;
+    }
+    .item {
+    width: 100%;
+    margin-top: 40px;
+    grid-auto-rows: 280px 65px 72px;
+    max-width: 340px;
+    min-width: 340px;
+    margin: 0 10px;
+    }
+}
